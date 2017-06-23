@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+	int a[10],temp;
+	int *b=a,*e=a,*d=a,*c;
+	while(b<a+10)
+		scanf("%d",b++);
+	for(;d<a+10;d++)
+		for(c=d+1;c<a+10;c++)
+		{
+			if(*d>*c)
+			{
+				temp=*d;
+				*d=*c;
+				*c=temp;
+			}
+		}
+	while(e<a+10)
+		printf("%d ",*e++);
+		return 0;	
+ } 
